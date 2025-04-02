@@ -10,9 +10,12 @@ function moveCursor(currentInput, nextInputId) {
 
     currentInput.value = value;
 
+    // Если длина введенного значения равна 2 и это не точка
     if (value.length === 1 && !value.includes('.')) {
         currentInput.value += '.';
     }
+
+    // Перемещаем курсор после ввода 4 символов
     if (value.length === 4) {
         setTimeout(() => {
             document.getElementById(nextInputId).focus();
