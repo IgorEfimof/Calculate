@@ -2,19 +2,19 @@ body {
     padding-bottom: 1rem;
     background-color: #121212;
     color: #ffffff;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Увеличиваем шрифт */
 }
 
 /* Input field styling */
 input.coefficient-input {
     text-align: center;
-    font-size: 1rem;
-    height: 2.5rem;
-    padding: 0.25rem 0.5rem;
+    font-size: 1.2rem; /* Увеличиваем шрифт */
+    height: 3rem; /* Увеличиваем высоту */
+    padding: 0.5rem;
     background-color: #1e1e1e;
     color: #ffffff;
     border: 1px solid #444444;
-    width: 80px; /* Уменьшаем ширину полей ввода */
+    width: 100px; /* Уменьшаем ширину */
 }
 
 input.coefficient-input:focus {
@@ -22,39 +22,30 @@ input.coefficient-input:focus {
     border-color: #007bff;
 }
 
-/* Maintain fixed height for results to avoid layout shifts */
-#results-container {
-    transition: opacity 0.3s ease;
+/* Buttons styling */
+button.btn-calculate, button.btn-clear {
+    font-size: 1.2rem; /* Увеличиваем шрифт */
+    padding: 0.75rem 1.5rem; /* Увеличиваем высоту кнопок */
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
 }
 
-/* Make sure the winner alert is prominent */
-#winner-alert {
-    font-size: 1.3rem;
-    border-left: 5px solid;
+button.btn-calculate {
+    background-color: #007bff;
+    color: #ffffff;
 }
 
-/* Highlight the sums */
-#player1-sum, #player2-sum {
-    font-size: 1.4rem;
+button.btn-clear {
+    background-color: #6c757d;
+    color: #ffffff;
 }
 
-/* Add a subtle animation to the form buttons */
-.btn {
-    transition: transform 0.2s ease;
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
+button.btn-calculate:hover, button.btn-clear:hover {
+    opacity: 0.8;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-/* Error styling */
-#error-alert {
-    border-left: 5px solid var(--bs-danger);
-}
-
-/* Improved card styling */
+/* Card styling */
 .card {
     border-radius: 0.5rem;
     overflow: hidden;
@@ -72,12 +63,6 @@ input.coefficient-input:focus {
 
 .card-body {
     padding: 1.5rem; /* Увеличиваем высоту тела карточки */
-}
-
-/* AI analysis section styling */
-#ai-analysis-container .card {
-    background-color: rgba(0, 123, 255, 0.05);
-    border-left: 4px solid var(--bs-info);
 }
 
 /* Responsive adjustments */
