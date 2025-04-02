@@ -1,148 +1,54 @@
 <!DOCTYPE html>
-<html lang="ru" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Калькулятор победителя матча по настольному теннису</title>
-    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теннисный Калькулятор</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container my-3">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center mb-3">Калькулятор победителя матча</h1>
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h5 class="mb-0">Введите коэффициенты игроков</h5>
-                    </div>
-                    <div class="card-body">
-                        <form id="calculator-form">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-sm">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>Игрок 1</th>
-                                            <th>Гейм</th>
-                                            <th>Игрок 2</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player1_game5" name="player1_game5" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                            <td class="align-middle text-center">Гейм 5</td>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player2_game5" name="player2_game5" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player1_game6" name="player1_game6" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                            <td class="align-middle text-center">Гейм 6</td>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player2_game6" name="player2_game6" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player1_game7" name="player1_game7" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                            <td class="align-middle text-center">Гейм 7</td>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player2_game7" name="player2_game7" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player1_game8" name="player1_game8" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                            <td class="align-middle text-center">Гейм 8</td>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player2_game8" name="player2_game8" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player1_game9" name="player1_game9" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                            <td class="align-middle text-center">Гейм 9</td>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player2_game9" name="player2_game9" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player1_game10" name="player1_game10" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                            <td class="align-middle text-center">Гейм 10</td>
-                                            <td>
-                                                <input type="text" class="form-control coefficient-input" id="player2_game10" name="player2_game10" maxlength="4" placeholder="0.00" required>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="d-flex justify-content-center gap-2">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="bi bi-calculator"></i> Рассчитать победителя
-                                </button>
-                                <button type="button" id="reset-button" class="btn btn-secondary">
-                                    <i class="bi bi-arrow-counterclockwise"></i> Сбросить
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Results Card -->
-                <div id="results-container" class="card mb-4 shadow-sm d-none">
-                    <div class="card-header bg-primary text-white text-center">
-                        <h4 id="winner" class="mb-0"></h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>Игрок 1</h5>
-                                <p>Сумма десятичных частей: <span id="player1-sum" class="fw-bold"></span></p>
-                                <div class="small text-muted" id="player1-details"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>Игрок 2</h5>
-                                <p>Сумма десятичных частей: <span id="player2-sum" class="fw-bold"></span></p>
-                                <div class="small text-muted" id="player2-details"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Error Alert -->
-                <div id="error-alert" class="alert alert-danger d-none">
-                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                    <span id="error-message"></span>
-                </div>
-
-                <!-- How It Works Card -->
-                <div class="card shadow-sm d-none d-md-block">
-                    <div class="card-header">
-                        <h5 class="mb-0">Как это работает</h5>
-                    </div>
-                    <div class="card-body">
-                        <ol>
-                            <li>Введите значения коэффициентов для обоих игроков (геймы 5-10)</li>
-                            <li>Приложение вычисляет сумму <strong>только десятичных частей</strong> каждого коэффициента</li>
-                            <li>Пример: Для 3.45 в сумму добавляется только 0.45</li>
-                            <li>Игрок с <strong>меньшей суммой</strong> объявляется победителем</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
+    <h1>Теннисный Калькулятор</h1>
+    <form id="calculatorForm">
+        <div class="input-row">
+            <label for="player1-game5">Гейм 5</label>
+            <input type="text" class="coefficient-input" id="player1-game5" inputmode="decimal" oninput="moveCursor(this, 'player2-game5')">
+            <input type="text" class="coefficient-input" id="player2-game5" inputmode="decimal" oninput="moveCursor(this, 'player1-game6')">
         </div>
+        <div class="input-row">
+            <label for="player1-game6">Гейм 6</label>
+            <input type="text" class="coefficient-input" id="player1-game6" inputmode="decimal" oninput="moveCursor(this, 'player2-game6')">
+            <input type="text" class="coefficient-input" id="player2-game6" inputmode="decimal" oninput="moveCursor(this, 'player1-game7')">
+        </div>
+        <div class="input-row">
+            <label for="player1-game7">Гейм 7</label>
+            <input type="text" class="coefficient-input" id="player1-game7" inputmode="decimal" oninput="moveCursor(this, 'player2-game7')">
+            <input type="text" class="coefficient-input" id="player2-game7" inputmode="decimal" oninput="moveCursor(this, 'player1-game8')">
+        </div>
+        <div class="input-row">
+            <label for="player1-game8">Гейм 8</label>
+            <input type="text" class="coefficient-input" id="player1-game8" inputmode="decimal" oninput="moveCursor(this, 'player2-game8')">
+            <input type="text" class="coefficient-input" id="player2-game8" inputmode="decimal" oninput="moveCursor(this, 'player1-game9')">
+        </div>
+        <div class="input-row">
+            <label for="player1-game9">Гейм 9</label>
+            <input type="text" class="coefficient-input" id="player1-game9" inputmode="decimal" oninput="moveCursor(this, 'player2-game9')">
+            <input type="text" class="coefficient-input" id="player2-game9" inputmode="decimal" oninput="moveCursor(this, 'player1-game10')">
+        </div>
+        <div class="input-row">
+            <label for="player1-game10">Гейм 10</label>
+            <input type="text" class="coefficient-input" id="player1-game10" inputmode="decimal" oninput="moveCursor(this, 'player2-game10')">
+            <input type="text" class="coefficient-input" id="player2-game10" inputmode="decimal" oninput="moveCursor(this, 'calculateButton')">
+        </div>
+        <div class="buttons">
+            <button type="button" id="calculateButton" class="btn-calculate" onclick="calculateWinner()">Рассчитать победителя</button>
+            <button type="button" class="btn-clear" onclick="clearData()">Очистить данные</button>
+        </div>
+    </form>
+    <div id="result-container">
+        <h2 id="result"></h2>
+        <div id="trophy" style="display: none;">🏆</div>
+        <div id="confetti" style="display: none;">🎉🎉🎉</div>
     </div>
-
-    <script src="static/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
