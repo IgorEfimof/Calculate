@@ -1,5 +1,15 @@
 function moveCursor(currentInput, nextInputId) {
-    const value = currentInput.value;
+    let value = currentInput.value;
+
+    // Разрешаем только цифры и одну точку
+    value = value.replace(/[^0-9.]/g, '');
+    const parts = value.split('.');
+    if (parts.length > 2) {
+        value = parts[0] + '.' + parts.slice(1).join('');
+    }
+
+    currentInput.value = value;
+
     if (value.length === 1 && !value.includes('.')) {
         currentInput.value += '.';
     }
@@ -57,7 +67,7 @@ function calculateWinner() {
 }
 
 function clearData() {
-    const inputs = document.querySelectorAll('input[type="number"]');
+    const inputs = document.querySelectorAll('input[type="text"]');
     inputs.forEach(input => input.value = '');
     document.getElementById('result').textContent = '';
     document.getElementById('trophy').style.display = 'none';
