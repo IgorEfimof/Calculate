@@ -1,9 +1,9 @@
 function moveCursor(currentInput, nextInputId) {
     const value = currentInput.value;
-    if (value.length === 1) {
+    if (value.length === 1 && !value.includes('.')) {
         currentInput.value += '.';
     }
-    if (value.length === 4) {
+    if (value.length === 3) {
         document.getElementById(nextInputId).focus();
     }
 }
@@ -57,7 +57,7 @@ function calculateWinner() {
 }
 
 function clearData() {
-    const inputs = document.querySelectorAll('input[type="text"]');
+    const inputs = document.querySelectorAll('input[type="number"]');
     inputs.forEach(input => input.value = '');
     document.getElementById('result').textContent = '';
     document.getElementById('trophy').style.display = 'none';
