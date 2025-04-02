@@ -13,7 +13,7 @@ function moveCursor(currentInput, nextInputId) {
     if (value.length === 1 && !value.includes('.')) {
         currentInput.value += '.';
     }
-    if (value.length === 3) {
+    if (value.length === 4) {
         setTimeout(() => {
             document.getElementById(nextInputId).focus();
         }, 100); // Добавляем небольшую задержку
