@@ -40,12 +40,12 @@
                 <label for="player1-game10" class="game-label">Гейм 10</label>
                 <input type="text" class="coefficient-input" id="player2-game10" inputmode="decimal" oninput="moveCursor(this, 'calculateButton')">
             </div>
-            <div class="buttons">
+            <div class="buttons d-flex flex-column align-items-center">
                 <button type="button" id="calculateButton" class="btn-calculate" onclick="calculateWinner()">Рассчитать победителя</button>
                 <button type="button" class="btn-clear" onclick="clearData()">Очистить данные</button>
             </div>
         </form>
-        <div id="result-container">
+        <div id="result-container" class="text-center">
             <h2 id="result"></h2>
             <div id="trophy" style="display: none;">🏆</div>
             <div id="confetti" style="display: none;">🎉🎉🎉</div>
