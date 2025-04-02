@@ -1,19 +1,9 @@
 function moveCursor(currentInput, nextInputId) {
-    let value = currentInput.value;
-
-    // Разрешаем только цифры и одну точку
-    value = value.replace(/[^0-9.]/g, '');
-    const parts = value.split('.');
-    if (parts.length > 2) {
-        value = parts[0] + '.' + parts.slice(1).join('');
-    }
-
-    currentInput.value = value;
-
-    if (value.length === 1 && !value.includes('.')) {
+    const value = currentInput.value;
+    if (value.length === 1) {
         currentInput.value += '.';
     }
-    if (value.length === 3) {
+    if (value.length === 4) {
         document.getElementById(nextInputId).focus();
     }
 }
