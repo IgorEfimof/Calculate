@@ -9,26 +9,38 @@
 <body>
     <h1>Теннисный Калькулятор</h1>
     <form id="calculatorForm">
-        <div class="player-column">
-            <h2>Игрок 1</h2>
-            <input type="number" step="0.01" id="player1-game5" placeholder="Гейм 5">
-            <input type="number" step="0.01" id="player1-game6" placeholder="Гейм 6">
-            <input type="number" step="0.01" id="player1-game7" placeholder="Гейм 7">
-            <input type="number" step="0.01" id="player1-game8" placeholder="Гейм 8">
-            <input type="number" step="0.01" id="player1-game9" placeholder="Гейм 9">
-            <input type="number" step="0.01" id="player1-game10" placeholder="Гейм 10">
+        <div class="input-row">
+            <label for="player1-game5">Гейм 5</label>
+            <input type="text" id="player1-game5" maxlength="4" oninput="moveCursor(this, 'player2-game5')">
+            <input type="text" id="player2-game5" maxlength="4" oninput="moveCursor(this, 'player1-game6')">
         </div>
-        <div class="player-column">
-            <h2>Игрок 2</h2>
-            <input type="number" step="0.01" id="player2-game5" placeholder="Гейм 5">
-            <input type="number" step="0.01" id="player2-game6" placeholder="Гейм 6">
-            <input type="number" step="0.01" id="player2-game7" placeholder="Гейм 7">
-            <input type="number" step="0.01" id="player2-game8" placeholder="Гейм 8">
-            <input type="number" step="0.01" id="player2-game9" placeholder="Гейм 9">
-            <input type="number" step="0.01" id="player2-game10" placeholder="Гейм 10">
+        <div class="input-row">
+            <label for="player1-game6">Гейм 6</label>
+            <input type="text" id="player1-game6" maxlength="4" oninput="moveCursor(this, 'player2-game6')">
+            <input type="text" id="player2-game6" maxlength="4" oninput="moveCursor(this, 'player1-game7')">
+        </div>
+        <div class="input-row">
+            <label for="player1-game7">Гейм 7</label>
+            <input type="text" id="player1-game7" maxlength="4" oninput="moveCursor(this, 'player2-game7')">
+            <input type="text" id="player2-game7" maxlength="4" oninput="moveCursor(this, 'player1-game8')">
+        </div>
+        <div class="input-row">
+            <label for="player1-game8">Гейм 8</label>
+            <input type="text" id="player1-game8" maxlength="4" oninput="moveCursor(this, 'player2-game8')">
+            <input type="text" id="player2-game8" maxlength="4" oninput="moveCursor(this, 'player1-game9')">
+        </div>
+        <div class="input-row">
+            <label for="player1-game9">Гейм 9</label>
+            <input type="text" id="player1-game9" maxlength="4" oninput="moveCursor(this, 'player2-game9')">
+            <input type="text" id="player2-game9" maxlength="4" oninput="moveCursor(this, 'player1-game10')">
+        </div>
+        <div class="input-row">
+            <label for="player1-game10">Гейм 10</label>
+            <input type="text" id="player1-game10" maxlength="4" oninput="moveCursor(this, 'player2-game10')">
+            <input type="text" id="player2-game10" maxlength="4" oninput="moveCursor(this, 'calculateButton')">
         </div>
         <div class="buttons">
-            <button type="button" onclick="calculateWinner()">Рассчитать победителя</button>
+            <button type="button" id="calculateButton" onclick="calculateWinner()">Рассчитать победителя</button>
             <button type="button" onclick="clearData()">Очистить данные</button>
         </div>
     </form>
