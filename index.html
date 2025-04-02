@@ -11,33 +11,33 @@
     <form id="calculatorForm">
         <div class="input-row">
             <label for="player1-game5">Гейм 5</label>
-            <input type="text" id="player1-game5" maxlength="4" oninput="moveCursor(this, 'player2-game5')">
-            <input type="text" id="player2-game5" maxlength="4" oninput="moveCursor(this, 'player1-game6')">
+            <input type="text" id="player1-game5" inputmode="decimal" oninput="moveCursor(this, 'player2-game5')">
+            <input type="text" id="player2-game5" inputmode="decimal" oninput="moveCursor(this, 'player1-game6')">
         </div>
         <div class="input-row">
             <label for="player1-game6">Гейм 6</label>
-            <input type="text" id="player1-game6" maxlength="4" oninput="moveCursor(this, 'player2-game6')">
-            <input type="text" id="player2-game6" maxlength="4" oninput="moveCursor(this, 'player1-game7')">
+            <input type="text" id="player1-game6" inputmode="decimal" oninput="moveCursor(this, 'player2-game6')">
+            <input type="text" id="player2-game6" inputmode="decimal" oninput="moveCursor(this, 'player1-game7')">
         </div>
         <div class="input-row">
             <label for="player1-game7">Гейм 7</label>
-            <input type="text" id="player1-game7" maxlength="4" oninput="moveCursor(this, 'player2-game7')">
-            <input type="text" id="player2-game7" maxlength="4" oninput="moveCursor(this, 'player1-game8')">
+            <input type="text" id="player1-game7" inputmode="decimal" oninput="moveCursor(this, 'player2-game7')">
+            <input type="text" id="player2-game7" inputmode="decimal" oninput="moveCursor(this, 'player1-game8')">
         </div>
         <div class="input-row">
             <label for="player1-game8">Гейм 8</label>
-            <input type="text" id="player1-game8" maxlength="4" oninput="moveCursor(this, 'player2-game8')">
-            <input type="text" id="player2-game8" maxlength="4" oninput="moveCursor(this, 'player1-game9')">
+            <input type="text" id="player1-game8" inputmode="decimal" oninput="moveCursor(this, 'player2-game8')">
+            <input type="text" id="player2-game8" inputmode="decimal" oninput="moveCursor(this, 'player1-game9')">
         </div>
         <div class="input-row">
             <label for="player1-game9">Гейм 9</label>
-            <input type="text" id="player1-game9" maxlength="4" oninput="moveCursor(this, 'player2-game9')">
-            <input type="text" id="player2-game9" maxlength="4" oninput="moveCursor(this, 'player1-game10')">
+            <input type="text" id="player1-game9" inputmode="decimal" oninput="moveCursor(this, 'player2-game9')">
+            <input type="text" id="player2-game9" inputmode="decimal" oninput="moveCursor(this, 'player1-game10')">
         </div>
         <div class="input-row">
             <label for="player1-game10">Гейм 10</label>
-            <input type="text" id="player1-game10" maxlength="4" oninput="moveCursor(this, 'player2-game10')">
-            <input type="text" id="player2-game10" maxlength="4" oninput="moveCursor(this, 'calculateButton')">
+            <input type="text" id="player1-game10" inputmode="decimal" oninput="moveCursor(this, 'player2-game10')">
+            <input type="text" id="player2-game10" inputmode="decimal" oninput="moveCursor(this, 'calculateButton')">
         </div>
         <div class="buttons">
             <button type="button" id="calculateButton" onclick="calculateWinner()">Рассчитать победителя</button>
