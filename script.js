@@ -28,11 +28,38 @@ function calculateWinner() {
     const player2DecimalSum = calculateDecimalPartsSum(player2Scores);
 
     const resultElement = document.getElementById('result');
+    const trophyElement = document.getElementById('trophy');
+    const confettiElement = document.getElementById('confetti');
+
     if (player1DecimalSum < player2DecimalSum) {
         resultElement.textContent = 'Победитель: Игрок 1';
+        trophyElement.style.display = 'block';
+        confettiElement.style.display = 'block';
     } else if (player1DecimalSum > player2DecimalSum) {
         resultElement.textContent = 'Победитель: Игрок 2';
+        trophyElement.style.display = 'block';
+        confettiElement.style.display = 'block';
     } else {
         resultElement.textContent = 'Ничья';
+        trophyElement.style.display = 'none';
+        confettiElement.style.display = 'none';
     }
+}
+
+function clearData() {
+    document.getElementById('player1-game5').value = '';
+    document.getElementById('player1-game6').value = '';
+    document.getElementById('player1-game7').value = '';
+    document.getElementById('player1-game8').value = '';
+    document.getElementById('player1-game9').value = '';
+    document.getElementById('player1-game10').value = '';
+    document.getElementById('player2-game5').value = '';
+    document.getElementById('player2-game6').value = '';
+    document.getElementById('player2-game7').value = '';
+    document.getElementById('player2-game8').value = '';
+    document.getElementById('player2-game9').value = '';
+    document.getElementById('player2-game10').value = '';
+    document.getElementById('result').textContent = '';
+    document.getElementById('trophy').style.display = 'none';
+    document.getElementById('confetti').style.display = 'none';
 }
