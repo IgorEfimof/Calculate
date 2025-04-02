@@ -46,8 +46,8 @@ input.coefficient-input:focus {
 }
 
 /* Center the winner and make it bigger */
-#winner {
-    font-size: 2rem; /* Увеличиваем шрифт */
+#result {
+    font-size: 2.5rem; /* Увеличиваем шрифт */
     font-weight: bold;
 }
 
