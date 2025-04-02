@@ -2,17 +2,19 @@ body {
     padding-bottom: 1rem;
     background-color: #121212;
     color: #ffffff;
+    font-size: 1.1rem;
 }
 
 /* Input field styling */
 input.coefficient-input {
     text-align: center;
-    font-size: 0.95rem;
-    height: 2rem;
+    font-size: 1rem;
+    height: 2.5rem;
     padding: 0.25rem 0.5rem;
     background-color: #1e1e1e;
     color: #ffffff;
     border: 1px solid #444444;
+    width: 80px; /* Уменьшаем ширину полей ввода */
 }
 
 input.coefficient-input:focus {
@@ -27,18 +29,20 @@ input.coefficient-input:focus {
 
 /* Make sure the winner alert is prominent */
 #winner-alert {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     border-left: 5px solid;
 }
 
 /* Highlight the sums */
 #player1-sum, #player2-sum {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 /* Add a subtle animation to the form buttons */
 .btn {
     transition: transform 0.2s ease;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
 }
 
 .btn:hover {
@@ -57,11 +61,17 @@ input.coefficient-input:focus {
     background-color: #1e1e1e;
     color: #ffffff;
     border: 1px solid #444444;
+    margin-bottom: 1rem; /* Увеличиваем расстояние между карточками */
 }
 
 .card-header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background-color: #2a2a2a;
+    padding: 1rem; /* Увеличиваем высоту заголовка карточки */
+}
+
+.card-body {
+    padding: 1.5rem; /* Увеличиваем высоту тела карточки */
 }
 
 /* AI analysis section styling */
@@ -79,20 +89,20 @@ input.coefficient-input:focus {
     }
     
     .card-body {
-        padding: 0.75rem;
+        padding: 1rem;
     }
     
     .card-header {
-        padding: 0.5rem 0.75rem;
+        padding: 0.75rem 1rem;
     }
     
     .btn {
-        padding: 0.2rem 0.5rem;
-        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
     }
     
     .table td, .table th {
-        padding: 0.25rem;
+        padding: 0.4rem;
     }
     
     #winner-alert {
