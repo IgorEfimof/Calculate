@@ -2,14 +2,59 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
+    background-color: #003366; /* Темно-синий фон */
+    color: white;
+}
+
+h1, h2 {
+    color: white;
 }
 
 form {
-    display: inline-block;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 input {
     display: block;
     margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    width: 150px;
+}
+
+input:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.player-column {
+    margin: 0 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #66afe9;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #559fd3;
+}
+
+#result-container {
+    margin-top: 20px;
 }
