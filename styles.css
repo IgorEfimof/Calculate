@@ -15,11 +15,18 @@ input.coefficient-input {
     color: #ffffff;
     border: 1px solid #444444;
     width: 100px; /* Уменьшаем ширину */
+    margin-bottom: 1rem; /* Добавляем пробелы между строками */
 }
 
 input.coefficient-input:focus {
     background-color: #2a2a2a;
     border-color: #007bff;
+}
+
+/* Center the winner and make it bigger */
+#winner {
+    font-size: 2rem; /* Увеличиваем шрифт */
+    font-weight: bold;
 }
 
 /* Buttons styling */
