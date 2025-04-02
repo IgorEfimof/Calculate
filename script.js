@@ -1,3 +1,13 @@
+function moveCursor(currentInput, nextInputId) {
+    const value = currentInput.value;
+    if (value.length === 1) {
+        currentInput.value += '.';
+    }
+    if (value.length === 4) {
+        document.getElementById(nextInputId).focus();
+    }
+}
+
 function calculateDecimalPartsSum(playerScores) {
     return playerScores.reduce((sum, score) => {
         const decimalPart = score - Math.floor(score);
@@ -47,18 +57,8 @@ function calculateWinner() {
 }
 
 function clearData() {
-    document.getElementById('player1-game5').value = '';
-    document.getElementById('player1-game6').value = '';
-    document.getElementById('player1-game7').value = '';
-    document.getElementById('player1-game8').value = '';
-    document.getElementById('player1-game9').value = '';
-    document.getElementById('player1-game10').value = '';
-    document.getElementById('player2-game5').value = '';
-    document.getElementById('player2-game6').value = '';
-    document.getElementById('player2-game7').value = '';
-    document.getElementById('player2-game8').value = '';
-    document.getElementById('player2-game9').value = '';
-    document.getElementById('player2-game10').value = '';
+    const inputs = document.querySelectorAll('input[type="text"]');
+    inputs.forEach(input => input.value = '');
     document.getElementById('result').textContent = '';
     document.getElementById('trophy').style.display = 'none';
     document.getElementById('confetti').style.display = 'none';
