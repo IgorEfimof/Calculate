@@ -23,6 +23,16 @@ input.coefficient-input:focus {
     border-color: #007bff;
 }
 
+/* Game label styling */
+.game-label {
+    margin: 0 1rem; /* Добавляем пробелы между колонками */
+    font-size: 1.2rem; /* Увеличиваем шрифт */
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    width: 100px; /* Задаем фиксированную ширину */
+}
+
 /* Center the winner and make it bigger */
 #winner {
     font-size: 2rem; /* Увеличиваем шрифт */
