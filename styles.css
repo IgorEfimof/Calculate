@@ -128,3 +128,45 @@ button.btn-calculate:hover, button.btn-clear:hover {
         margin-bottom: 0.5rem !important;
     }
 }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .center-content {
+        padding: 0 10px;
+    }
+
+    .input-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .game-label {
+        margin-bottom: 5px;
+    }
+
+    .coefficient-input {
+        width: 100%;
+    }
+
+    button.btn-calculate, button.btn-clear {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-label {
+        font-size: 14px;
+    }
+
+    .coefficient-input {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #result {
+        font-size: 2rem;
+    }
+}
