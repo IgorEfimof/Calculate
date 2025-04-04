@@ -128,6 +128,7 @@ button.btn-calculate:hover, button.btn-clear:hover {
         margin-bottom: 0.5rem !important;
     }
 }
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .center-content {
