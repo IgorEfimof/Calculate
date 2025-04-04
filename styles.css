@@ -104,9 +104,9 @@ button.btn-calculate:hover, button.btn-clear:hover {
 /* Responsive adjustments */
 .input-row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem; /* Уменьшаем расстояние между графами */
+    flex-wrap: wrap; /* Добавляем flex-wrap для переноса строк */
 }
 
 @media (max-width: 768px) {
@@ -135,8 +135,7 @@ button.btn-calculate:hover, button.btn-clear:hover {
 
     .game-label,
     .coefficient-input {
-        width: calc(50% - 0.5rem); /* Уменьшаем расстояние между графами и названиями геймов */
-        margin: 0.5rem auto;
+        width: 45%; /* Уменьшаем ширину для размещения рядом */
         font-size: 1rem;
     }
 }
@@ -144,8 +143,7 @@ button.btn-calculate:hover, button.btn-clear:hover {
 @media (max-width: 480px) {
     .game-label,
     .coefficient-input {
-        width: 100%;
-        margin: 0.5rem 0;
+        width: 45%; /* Уменьшаем ширину для размещения рядом */
         font-size: 1rem;
     }
 
@@ -156,10 +154,6 @@ button.btn-calculate:hover, button.btn-clear:hover {
     h1 {
         font-size: 1.5rem;
     }
-
-    .input-row {
-        flex-direction: column;
-        align-items: center;
-    }
 }
+
 
