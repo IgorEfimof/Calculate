@@ -32,7 +32,8 @@ input.coefficient-input {
     background-color: #1e1e1e;
     color: #ffffff;
     border: 1px solid #444444;
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
     margin-bottom: 0.5rem; /* Уменьшаем расстояние между графами */
 }
 
@@ -47,7 +48,8 @@ input.coefficient-input:focus {
     font-size: 1.2rem;
     text-align: center;
     display: inline-block;
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
 }
 
 /* Result styling */
