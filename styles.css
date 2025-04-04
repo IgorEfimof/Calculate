@@ -33,7 +33,7 @@ input.coefficient-input {
     color: #ffffff;
     border: 1px solid #444444;
     width: 100px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Уменьшаем расстояние между графами */
 }
 
 input.coefficient-input:focus {
@@ -43,7 +43,7 @@ input.coefficient-input:focus {
 
 /* Game label styling */
 .game-label {
-    margin: 0 1rem;
+    margin: 0 0.5rem; /* Уменьшаем расстояние между графами и названиями геймов */
     font-size: 1.2rem;
     text-align: center;
     display: inline-block;
@@ -104,7 +104,7 @@ button.btn-calculate:hover, button.btn-clear:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem; /* Уменьшаем расстояние между графами */
 }
 
 @media (max-width: 768px) {
@@ -133,7 +133,7 @@ button.btn-calculate:hover, button.btn-clear:hover {
 
     .game-label,
     .coefficient-input {
-        width: calc(50% - 1rem);
+        width: calc(50% - 0.5rem); /* Уменьшаем расстояние между графами и названиями геймов */
         margin: 0.5rem auto;
         font-size: 1rem;
     }
