@@ -133,7 +133,9 @@ button.btn-calculate:hover, button.btn-clear:hover {
     }
 
     .input-row {
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .game-label, .coefficient-input {
