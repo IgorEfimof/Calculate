@@ -129,30 +129,7 @@ button.btn-calculate:hover, button.btn-clear:hover {
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .center-content {
-        padding: 0 10px;
-    }
 
-    .input-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .game-label {
-        margin-bottom: 5px;
-    }
-
-    .coefficient-input {
-        width: 100%;
-    }
-
-    button.btn-calculate, button.btn-clear {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
 
 @media (max-width: 480px) {
     .game-label {
