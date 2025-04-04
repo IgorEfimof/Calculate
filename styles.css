@@ -1,8 +1,13 @@
+/* Global reset */
+* {
+    box-sizing: border-box;
+}
+
 body {
     padding-bottom: 1rem;
     background-color: #121212;
     color: #ffffff;
-    font-size: 1.2rem; /* Увеличиваем шрифт */
+    font-size: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,19 +20,20 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 600px;
+    padding: 1rem;
 }
 
 /* Input field styling */
 input.coefficient-input {
     text-align: center;
-    font-size: 1.2rem; /* Увеличиваем шрифт */
-    height: 3rem; /* Увеличиваем высоту */
+    font-size: 1.2rem;
+    height: 3rem;
     padding: 0.5rem;
     background-color: #1e1e1e;
     color: #ffffff;
     border: 1px solid #444444;
-    width: 100px; /* Уменьшаем ширину */
-    margin-bottom: 1rem; /* Добавляем пробелы между строками */
+    width: 100px;
+    margin-bottom: 1rem;
 }
 
 input.coefficient-input:focus {
@@ -37,24 +43,23 @@ input.coefficient-input:focus {
 
 /* Game label styling */
 .game-label {
-    margin: 0 1rem; /* Добавляем пробелы между колонками */
-    font-size: 1.2rem; /* Увеличиваем шрифт */
+    margin: 0 1rem;
+    font-size: 1.2rem;
     text-align: center;
-    vertical-align: middle;
     display: inline-block;
-    width: 100px; /* Задаем фиксированную ширину */
+    width: 100px;
 }
 
-/* Center the winner and make it bigger */
+/* Result styling */
 #result {
-    font-size: 2.5rem; /* Увеличиваем шрифт */
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
 /* Buttons styling */
 button.btn-calculate, button.btn-clear {
-    font-size: 1.2rem; /* Увеличиваем шрифт */
-    padding: 0.75rem 1.5rem; /* Увеличиваем высоту кнопок */
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
     margin: 0.5rem;
     border: none;
     border-radius: 5px;
@@ -81,99 +86,78 @@ button.btn-calculate:hover, button.btn-clear:hover {
     background-color: #1e1e1e;
     color: #ffffff;
     border: 1px solid #444444;
-    margin-bottom: 1rem; /* Увеличиваем расстояние между карточками */
+    margin-bottom: 1rem;
 }
 
 .card-header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background-color: #2a2a2a;
-    padding: 1rem; /* Увеличиваем высоту заголовка карточки */
+    padding: 1rem;
 }
 
 .card-body {
-    padding: 1.5rem; /* Увеличиваем высоту тела карточки */
+    padding: 1.5rem;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .container {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        max-width: 100%;
-    }
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
 
-    .center-content {
-        width: 100%;
-    }
-    
+@media (max-width: 768px) {
     .card-body {
         padding: 1rem;
     }
-    
+
     .card-header {
         padding: 0.75rem 1rem;
     }
-    
+
     .btn {
         padding: 0.5rem 1rem;
         font-size: 1rem;
     }
-    
-    .table td, .table th {
-        padding: 0.4rem;
-    }
-    
+
     #winner-alert {
         padding: 0.5rem;
         margin-bottom: 0.5rem;
     }
-    
+
     h1 {
         margin-bottom: 0.5rem !important;
+        font-size: 1.75rem;
     }
 
-    .input-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .game-label, .coefficient-input {
+    .game-label,
+    .coefficient-input {
         width: 45%;
-        margin: 0.5rem 2.5%;
+        margin: 0.5rem auto;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .game-label {
-        font-size: 14px;
-        width: 100%;
-        text-align: center;
-        margin: 0.5rem 0;
-    }
-
+    .game-label,
     .coefficient-input {
-        font-size: 1rem;
         width: 100%;
-        margin-bottom: 0.5rem;
-    }
-
-    h1 {
-        font-size: 1.5rem;
+        margin: 0.5rem 0;
+        font-size: 1rem;
     }
 
     #result {
         font-size: 2rem;
     }
 
-    .game-label, .coefficient-input {
-        width: 100%;
-        margin: 0.5rem 0;
+    h1 {
+        font-size: 1.5rem;
     }
 
     .input-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
 }
+
