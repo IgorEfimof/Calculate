@@ -129,8 +129,6 @@ button.btn-calculate:hover, button.btn-clear:hover {
     }
 }
 
-
-
 @media (max-width: 480px) {
     .game-label {
         font-size: 14px;
