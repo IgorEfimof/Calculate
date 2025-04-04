@@ -139,7 +139,8 @@ button.btn-calculate:hover, button.btn-clear:hover {
     }
 
     .game-label, .coefficient-input {
-        width: calc(50% - 2rem);
+        width: 45%;
+        margin: 0.5rem 2.5%;
     }
 }
 
@@ -166,7 +167,8 @@ button.btn-calculate:hover, button.btn-clear:hover {
     }
 
     .game-label, .coefficient-input {
-        width: calc(50% - 1rem);
+        width: 100%;
+        margin: 0.5rem 0;
     }
 
     .input-row {
