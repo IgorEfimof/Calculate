@@ -133,7 +133,7 @@ button.btn-calculate:hover, button.btn-clear:hover {
 
     .game-label,
     .coefficient-input {
-        width: 45%;
+        width: calc(50% - 1rem);
         margin: 0.5rem auto;
         font-size: 1rem;
     }
