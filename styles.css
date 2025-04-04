@@ -146,10 +146,15 @@ button.btn-calculate:hover, button.btn-clear:hover {
 @media (max-width: 480px) {
     .game-label {
         font-size: 14px;
+        width: 100%;
+        text-align: left;
+        margin: 0.5rem 0;
     }
 
     .coefficient-input {
         font-size: 1rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
     }
 
     h1 {
@@ -158,9 +163,5 @@ button.btn-calculate:hover, button.btn-clear:hover {
 
     #result {
         font-size: 2rem;
-    }
-
-    .game-label, .coefficient-input {
-        width: calc(100% - 2rem);
     }
 }
