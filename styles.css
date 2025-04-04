@@ -101,6 +101,10 @@ button.btn-calculate:hover, button.btn-clear:hover {
         padding-right: 0.5rem;
         max-width: 100%;
     }
+
+    .center-content {
+        width: 90%;
+    }
     
     .card-body {
         padding: 1rem;
@@ -127,6 +131,14 @@ button.btn-calculate:hover, button.btn-clear:hover {
     h1 {
         margin-bottom: 0.5rem !important;
     }
+
+    .input-row {
+        flex-wrap: wrap;
+    }
+
+    .game-label, .coefficient-input {
+        width: calc(50% - 2rem);
+    }
 }
 
 @media (max-width: 480px) {
@@ -144,5 +156,9 @@ button.btn-calculate:hover, button.btn-clear:hover {
 
     #result {
         font-size: 2rem;
+    }
+
+    .game-label, .coefficient-input {
+        width: calc(100% - 2rem);
     }
 }
