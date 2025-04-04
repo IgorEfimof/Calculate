@@ -103,7 +103,7 @@ button.btn-calculate:hover, button.btn-clear:hover {
     }
 
     .center-content {
-        width: 90%;
+        width: 100%;
     }
     
     .card-body {
@@ -135,11 +135,11 @@ button.btn-calculate:hover, button.btn-clear:hover {
     .input-row {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .game-label, .coefficient-input {
-        width: calc(30% - 1rem);
+        width: calc(50% - 2rem);
     }
 }
 
@@ -163,5 +163,15 @@ button.btn-calculate:hover, button.btn-clear:hover {
 
     #result {
         font-size: 2rem;
+    }
+
+    .game-label, .coefficient-input {
+        width: calc(50% - 1rem);
+    }
+
+    .input-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
