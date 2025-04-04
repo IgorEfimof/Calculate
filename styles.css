@@ -135,11 +135,11 @@ button.btn-calculate:hover, button.btn-clear:hover {
     .input-row {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .game-label, .coefficient-input {
-        width: calc(50% - 2rem);
+        width: calc(30% - 1rem);
     }
 }
 
@@ -147,7 +147,7 @@ button.btn-calculate:hover, button.btn-clear:hover {
     .game-label {
         font-size: 14px;
         width: 100%;
-        text-align: left;
+        text-align: center;
         margin: 0.5rem 0;
     }
 
